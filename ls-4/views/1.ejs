@@ -1,0 +1,18 @@
+<html>
+<head>
+
+</head>
+
+<body>
+    <% include ./a.js %>
+    <div>
+        我的名字叫<%= name %>
+    </div>
+
+    <% if (type === 'admin') { %>
+        <% include ./a.js %>
+    <% } else { %>
+        <% include ./a.js %>
+    <% } %>
+</body>
+</html>

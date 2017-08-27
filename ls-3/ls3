@@ -1,0 +1,71 @@
+express 框架
+
+req, res
+
+创建服务，监听，处理请求
+
+三种方法处理请求
+
+.get('/', function(req, res) {})
+.post('/', function(req, res) {})
+.use('/', function(req, res) {})
+
+
+----------------------------------------------------------------
+
+中间件等~
+express-session
+express-static  // 读取中间件
+body-parser  // 解析post请求body数据
+
+----------------------------------------------------------------
+链式操作
+next()
+
+----------------------------------------------------------------
+http- 无状态协议
+
+cookie, session
+
+cookie： 在浏览器保存数据
+‘不安全’，大小有限（4k）
+
+session： 保存在服务端安全，基于cookie实现，通过sessionId来获取在服务端的session信息
+
+
+cookie： 1.读取cookie cookie-parser
+
+         目录访问权限
+         /        可以访问
+             /a   可以访问
+                   /aa 有cookie
+             /b    不可以访问
+            server.use(cookieParser(secretKey))
+            req.cookies()
+            req.signedCookies();
+
+         2. 发送cookie
+            req.cookie(名字, 值, {path:'', maxAge: 毫秒, signed: 签名})
+            如果signed为true， req.secret= secretKey
+
+        3. 加密cookie;
+            cookieEncrypter(secretKey)
+
+        4. 删除
+            res.cleaerCookie('name')
+----------------------------------------------------------------
+session: cookie-session
+server.use(cookieParser())
+server.use(cookieSession(
+    keys: [a, b, c]
+))
+
+server.use('/', function(req, res){
+    req.session
+])
+
+// 删除session
+delete res.session['name']
+
+
+

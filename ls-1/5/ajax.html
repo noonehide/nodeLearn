@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <script src="ajax.js"></script>
+</head>
+<body>
+用户名:<input type="text" name="user" id="user">
+密码: <input type="password" name="password" id="pass">
+<input type="button" value="登录" id="login">
+<input type="button" value="注册" id="register">
+</body>
+
+<script>
+    window.onload = function () {
+        var user = document.getElementById('user');
+        var password = document.getElementById('pass');
+        var login = document.getElementById('login');
+        var regiseter = document.getElementById('register');
+
+        login.onclick = function () {
+            ajax({
+                url: '/user',
+                data: {act: 'reg', user: user.value, password: password.value},
+                type: 'get'
+            })
+        }
+    }
+
+</script>
+</html>

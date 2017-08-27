@@ -1,0 +1,46 @@
+模块引擎
+
+jade - 侵入式引擎，不能用普通的html,css
+
+ejs - 温和的，弱依赖
+
+1.jade
+    cnpm install jade
+    使用缩进来判断层级
+
+    放入内容?    空格 + 内容
+
+    普通属性放在()里面，可以用逗号分割多个属性
+    script(src='a.js')
+
+    style属性         div(style="height：100px, width: 200px")
+                      div(style={width: '100px', height: '200px'})
+                      这两种方法都可以
+
+    class属性 可以使用数组写法
+                    div(class="left, right")
+                    div(class=[left, right])
+            简写方式
+                div#a   翻译成<div class="a">
+
+            // 使用json格式来当作属性
+            div&attributes({title:"name", id: "aaa"})
+
+
+    使用| 表示原样输出
+    在标签后面加上'.' 也可以原样输出，所有的下一级内容都会原样输出
+    include a.js 直接引用
+
+    - 代表自己是代码
+2. ejs
+    cnpm install ejs
+
+    输出 <%= name%>
+
+    <%= 里面可以写所有的js语法 %>
+
+    <%- 不转义输出 %>
+
+    <% include ./a.txt %>
+
+    include 不能引用变量

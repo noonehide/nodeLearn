@@ -1,0 +1,69 @@
+重要模块
+
+1.Crypto  加密
+
+2.DNS  域名解析
+
+3.Errors 各种异常
+
+4.Events 事件
+
+6.FS
+
+7.HTTP
+
+8. HTTPS
+
+9. Modules 模块
+
+10. Net 网络操作，例如发邮件等~
+
+11. OS: 操作系统
+
+12. Path： 处理文件路径, 返回目录名，文件名，扩展名等等
+
+13. Process: 进程
+
+14. QueryString
+
+15. Readline
+
+16. Stream: 流
+
+17.Timer: 定时器
+
+18. SSL： 加密
+
+19. TTY 链接远程
+
+20. UDP： 不稳定协议
+
+21. V8： V8引擎信息
+
+22. VM： 虚拟机
+
+23. Zlib: 压缩
+
+
+模块化：
+    require： 引入模块
+    module： 模块
+    exports： 输出
+
+
+npm install uninstall
+
+把模块放入node_modules中，模块可以直接引用
+
+npm login 登录
+
+npm whoami
+
+发布模块
+    1. npm init  填入相关信息 生成package.json
+    2. npm publish 发布模块
+    3. npm update 更新模块，首先要更新版本号
+    4. npm unpublish  删除模块 npm --force unpublish
+
+
+

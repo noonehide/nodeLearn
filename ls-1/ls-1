@@ -1,0 +1,28 @@
+why node
+    1. 性能
+    2. 与前台js配合
+    3. 基于Chrome V8引擎
+    4. 可移植
+
+
+命令行执行Node程序  node jade1.js
+
+WebStorm nodejs 配置： File->Languages and FrameWorks 配置Node地址
+
+HTTP模块(3.js):
+    创建服务，监听端口
+
+
+FS模块（4.js）:
+    文件资源放在www文件夹中
+    文件操作
+
+
+请求方式： get, post(数据比Get数据大得多)
+
+querystring模块 解析Get请求的url
+// var json = querystring.parse('')
+
+url 模块 (5.js)
+解析Get请求的url
+

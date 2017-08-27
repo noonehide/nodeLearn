@@ -1,0 +1,59 @@
+数据库
+
+MySql， 免费
+
+库:  新闻库，汽车库等等，类似于文件夹
+
+表： 实际存储数据的地方
+
+字符集： utf8 -- UTF-8 Unicode
+排序规则： utf8_general_ci  通用排序规则
+ID主键，自动递增
+类型： int varchar(较小字符串)
+主键： 唯一标识符， 唯一，性能更高
+
+1. 用户名，密码
+
+NodeJs支持MySql
+npm install mysql
+
+// sql
+1.关键字大写
+2.库, 表， 字段加上``
+
+增删改查
+增： insert
+    INSERT INTO 表 (字段列表) VALUES (值列表)
+    INSERT INTO `user_table` (`ID`, ``username`, `password`) VALUES(0, 'p4', '123456')
+删： delete
+改： update
+查： select
+    SELECT * FROM 表
+     [ RowDataPacket { ID: 1, username: 'p1', password: '123456' },
+      RowDataPacket { ID: 2, username: 'p2', password: '123456' },
+      RowDataPacket { ID: 3, username: 'p3', password: '123456' },
+      RowDataPacket { ID: 4, username: 'p5', password: '123456' },
+      RowDataPacket { ID: 5, username: 'p4', password: '123456' } ]
+
+//test
+数据字典
+1.banner_table
+     ID，
+     title,  标题    varchar(32)
+     sub_title 副标题  varchar(32)
+     src     图片地址 varchar(64)
+2.artical_table
+    ID
+    author 作者                     varchar(16)
+    author_src 头像                 varchar(64)
+    title                           varchar(32)
+    post_time 发布时间(s秒为单位)   int
+    content 内容                    text
+    n_like   赞                     int
+
+3.user_table
+    ID
+    username                         varchar(32)
+    password                         varchar(32)
+    src   头像                       varchar(64)
+

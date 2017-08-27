@@ -1,0 +1,40 @@
+//
+   Created by Administrator on 2017/8/6.
+html
+    head
+        style
+        script(src="a.js")
+        link(href="a.css", rel="stylesheet")
+
+        script
+            | window.onload = function() {
+            |   xxxxx
+            | }
+
+        script
+            include a.js
+
+    body
+        div
+            input(type='text', id='text1')
+        div
+            a(href="http://www.baidu.com") 百度1
+            a(href="http://www.baidu.com") 百度2
+
+        div aaaa
+            span bbbb
+
+        div(style="height：100px, width: 200px")
+        div(style={width: '100px', height: '200px'})
+
+            div(class="left, right")
+            div(class=[left, right])
+            div&attributes({title:"name", id: "aaa"})
+
+        div
+            |fdafasd
+            |fdasf
+            |lllllfds
+
+        div 我的名字；#{name}
+        span=name

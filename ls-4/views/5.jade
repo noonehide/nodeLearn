@@ -1,0 +1,20 @@
+//
+   Created by Administrator on 2017/8/6.
+html
+    head
+
+    body
+        -var a = 10;
+        -if a%2 === 0
+            div(style={background: 'red'}) 偶数
+        -else
+            div(style={background: 'blud'}) 奇数
+
+        // 如果前面有-，后面一直是代码，则后面可以不用-
+        case a
+            when 1
+                div aaa
+            when 2
+                div ccc
+            default
+               |不靠谱

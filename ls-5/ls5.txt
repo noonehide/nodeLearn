@@ -1,0 +1,19 @@
+1. body-parser 只能解析post数据不能解析上传文件
+
+上传文件 前端表单设置encytype="multipart/form-data"
+
+后台使用multer中间件解析
+var objMulter = multer({dest: './www/upload'})
+
+server.use(objmulter.any())
+
+// 文件路径解析
+const path = require('path');
+var str = 'c:\\username';
+var obj = path.parse(str);
+obj.base  文件名部分
+ext  扩展名部分
+dir  文件路径
+name 文件名
+
+2. consolidate 适配 支持各种模版引擎
