@@ -10,6 +10,7 @@
     "cookie-session": "2.0.0-alpha.2",
     "ejs": "^2.5.7",
     "express": "^4.15.4",
+    "express-route": "^0.1.4",
     "express-static": "^1.2.4",
     "jade": "^1.11.0",
     "multer": "^1.2.0",
